@@ -1,0 +1,224 @@
+\documentclass[12pt]{report}
+\usepackage{xcolor,hyperref,amsmath,amssymb,graphics,color,url,graphicx,multicol,setspace}
+\usepackage{mathrsfs,centernot,amsthm,algorithmic,mathtools,wrapfig}
+\usepackage[margin={3 cm, 3 cm, 2 cm,2 cm }]{geometry}%l,r,t,b margin widths
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{tikz,lipsum,lmodern}
+\usepackage[most]{tcolorbox}
+\usepackage{upgreek}
+\usepackage{geometry}
+\usepackage{graphicx,yfonts}
+\usepackage[Lenny]{fncychap}
+\definecolor{titlepagecolor}{cmyk}{1,.60,0.5,.40}
+\definecolor{namecolor}{cmyk}{1,.50,0,.10} % Here I am trying to define the font color that is used in the example but I don't really know which one is it so I leave this to the OP to figure out
+
+
+
+%--------------------------macros------------------------
+\newcommand{\MP}{ \color{red}{\textbf{ Mess Problem}}}
+\newcommand{\menu}{\color{red}{\textbf{ Menu}}}
+\newcommand{\RC}{\textbf{registered customers}}
+
+%------------------------------------------------------------
+
+
+%-----------------------------------------------------------------
+\begin{document}
+% ----------------------------------------------------------------
+
+\begin{titlepage}
+\newgeometry{left=3.5cm} %defines the geometry for the titlepage
+\pagecolor{titlepagecolor}
+\noindent
+\includegraphics[width=2cm]{logo.png}\\[-1em]
+\color{white}
+\makebox[0pt][l]{\rule{1.3\textwidth}{1pt}}
+\par
+\noindent
+\textbf{\textsf{The Institute Of Mathematical Sciences,}} \textcolor{namecolor}{\textsf{Chennai}}
+\vfill
+\noindent
+
+{\Huge $\mathcal{S}$olution \hspace{1pt} Manual\\}
+ \par  
+ {\Huge for the Students' Mess}  
+\vfill
+\noindent
+\textcolor{namecolor}{\huge \textsf{First Students' Mess Committee}}
+\vskip\baselineskip
+\noindent
+\textsf{Jul 27 2021}
+\end{titlepage}
+\restoregeometry % restores the geometry
+\nopagecolor% Use this to restore the color pages to white
+
+\newpage
+
+\tableofcontents
+
+
+\chapter{Introduction}
+%\input{}
+\section{Objective}
+The mess managers wish to provide a \textit{solution} to the {\MP}. 
+
+
+ {\MP} that we are trying to \textit{solve} involves the following :
+\begin{itemize}
+\item We want to meet the \textit{needs} of our fellow {\RC} in terms of 
+      \begin{itemize} 
+       \item food quantity 
+       \item balanced nutrition
+       \item price.
+      \end{itemize}
+
+\item The \textit{needs} of our {\RC} include not only a balanced nutrition and cost effective meals but also subjective aspects like taste.
+
+\item To attract the {\RC} we would need to also cater to their \textit{wants}.
+\item  There is also a need  to minimise \textbf{excess food wastage} as much as possible in our day to day functioning. That is the mess managers have to take care of a supply side issue. 
+
+\item To solve such a complicated problem we understand that the mess managers will be provided the assistance of  the cooks - \textbf{Ramesh, Munna and Atanu}, the cleaning staff, the assistants from IMSc - \textbf{Mr R. Krishnabalaji, Mr R Rajkumar, Mr  Ravichandran}, The mess managers might also need to check from time to time that they do not overburden helping staff with work. This depends on how efficient a system the mess managers design!
+\end{itemize}
+
+\chapter{Analysing the subproblems}
+The {\MP} can be divided into \textbf{qualitative} and \textbf{quantitative} subproblems as follows.
+\section{Qualitative Subproblems}
+\begin{itemize}
+\item Dealing with the \textbf{employees}. Whatever the mess managers solution be, they have to finally depend on the helping staff to have a perfect execution. For instance they need to know if the cooks will be able to cook the meals they desire. So a healthy communication between the mess managers and the helping staff is always essential. 
+\item Dealing with the {\RC}. The mess managers will essentially be asking these people to modify their daily behaviour to suit the system built and hence they will face a lot of resistance initially. It is expected that there will always be some people who will be unable to live up to the demands of the system but overtime it can be hoped that the numbers of such people will go down. Here the job of mess managers is also to be able to effectively communicate the innards of the functioning of system they designed. 
+\item Dealing with \textbf{Higher Authorities}. The mess managers might need to convince the faculty and also ask for their assistance to the {\MP}. The mess managers need to be able to make the \textbf{Higher Authorities} understand why their solution is better than the pre-existing IMSc solutions which catered to food distribution to the members of IMSc. A harmonious synergy is going to be very beneficial for this system to last long.
+\item The transitioning process from a batch of mess managers to another should involve as less hurdles as possible. The current batch of mess managers should be able to explain to them the system they have developed as clearly as possible. The matters of transfers of money for each {\RC} should be taken up with utmost care.
+
+\end{itemize}
+
+\section{Quantitative Subproblems}
+\subsection{Designing the {\menu} }
+The first step to the solution for the {\MP} is to design the {\menu} of items that are going to be served. This crucial step has both qualitative and quantitative elements hidden inside it. 
+
+The {\menu} represents food items served to the {\RC} through out the month. For each \textbf{day} of the month we normally have four \textit{serving times} - \textbf{Breakfast, Lunch, Pre-Dusk food arrangement, Dinner}. Each \textit{serving time} will include a group of food item(s) together catering to the respective timely needs of the {\RC}.
+
+On a first glance, one might just think that we may design any menu and it should work. But that is not the case. The \textbf{design} of the {\menu} is \textbf{constrained} by the following factors 
+\begin{itemize}
+\item The chef's ability to make an item that we have in our mind.
+\item The availability of the raw item available in our market!
+\item The different palates of our {\RC}.
+\item The distribution of workload on the chef's based on our Menu design through the crucial serving times of the day. An example would be, we ask the cook to make some heavy breakfast with two three items, this in itself exhausts the cooks, and if the same cooks are going to prepare the lunch they might not be able to be efficient for the lunch items and deliver a poor quality lunch.
+\item  The synergy of the overall food items served in each instance of the serving time for a day. Example, we can't have something like chappatis and icecream or chappatis an something which is a very dry poriyal. Basically, the combination of items should make sense.
+\end{itemize}
+So it is a complicated problem to work through. But, the design process can be reflecting the biases of the mess managers and that is still okay if there isn't substantial discrimination towards the minority palate. Another way to go about solving this problem is to set some items in the menu through an online voting process that involves all the {\RC}. It is upto the mess managers to decide on what route or combination of routes they wish to go, to solve this problem.  
+
+\subsection{Market Survey}
+After deciding the menu and with the consultation of the cooks the mess managers will realise the raw materials needed to procure. An idealised formal nature of this problem is as follows. {\color{red}{Caveat, it is understood that such formal abstraction ignores practical realities and is only helpful as a template to work upon but never mandated to be abided by.}}
+
+
+Let $\mathcal{M}=\{m_{1},m_{2},m_{3},\ldots\}$ denote the set of food items in the menu.
+
+
+Let $\mathcal{R}=\{r_{1},r_{2},r_{3},\ldots\}$ denote the raw materials required for the entire menu decided upon. Let $r_{m_{i}}\subset \mathcal{R}$ denote the raw materials required for making food item $m_{i}$.
+
+
+Let $\mathcal{Q}=\{q_{1},q_{2},q_{3},\ldots\}$ be the total quantity each respective material be required for the entire duration of the mess managers. That is it is assumed that during the entire tenure of the mess managers the raw material $r_{i}$ will be required in at most $q_{i}$ quantity.
+
+
+Let there be $n$ many providers available in the market that will supply the provision for the raw materials to us.
+
+
+Let $\mathcal{P}_{i} : \mathcal{R} \rightarrow \mathfrak{R}_{>0}$ be the price quoted by provider $i , ~( i \in [n])$, that relates each raw material to its price per unit quantity.
+
+
+What we wish to achieve during the market survey is basically the following, 
+
+\begin{equation*}
+\begin{aligned}
+& \underset{i \in [n]}{\text{minimize}}
+& & \sum_{j} P_{i}(r_{j})\times q_{j}\\
+\end{aligned}
+\end{equation*}
+
+The above sum is the gross expenditure sum. The practical realities would require us to partition the raw materials and look for a combination of providers that minimise this total cost or expenditure incurred by us. Also we might not be able to achieve the ideal solution. Let's call the ideal solution for the sum \textbf{ideal exp} and the realistic solution based on practical constraints the \textbf{prac exp}. These two amounts will be related as, $\textbf{ideal exp} \leq  \textbf{prac exp}$.
+
+\subsection{Accounting}
+We would need to set up a bank account that will be solely used for our the transactions related to the mess. Such an ideal account might in practice not be available in that case, one can make do with their personal accounts. It should be kept in mind that the mess manager uses his/her account very rarely for the duration of his/her tenure. Otherwise, it might become very complicated to work through if one has to have an honest accounting for the mess transactions.
+
+Daily procurements of raw materials from the supplier should be carefully accounted for. Keeping tabs on this would also make us realise the amount of wastage we incur through our system. Sudden checking of the quantity of materials supplied, is recommended.  
+
+In the previous section we have highlighted the calculation for the overall expenditure that will be incurred by the mess, what we need to highlight in this section therefore is the cash inflow to the system. Each {\RC} will be asked to provide a requisite amount depending on the solution concept we the mess managers have in mind. Let the total cash inflow by this procedure be \textbf{net sum}. What the mess managers would like to ensure is that $\textbf{prac exp} < \textbf{net sum}$. Ideas for tighter bounds can also be explored. Some hints will be given in the last section.
+
+
+
+\subsection{Feedback from {\RC}}
+We can quantify the satisfaction levels of the {\RC} regarding the food. This will serve as good data points that the mess managers can work with to ask the cooks to make the food items according to the demands of the {\RC}. It can also help in finding out an estimate for how much people will prefer certain food items and thereby accordingly the mess managers can notify the cooks to make an upper bound of that many copies of the particular food item.
+\chapter{Our Solution}
+Our system has the following features :
+\begin{itemize}
+\item We divide the menu into two major features - \textbf{meal items}, \textbf{coupon items}. \textbf{Meal items} are to serve as the needs of the {\RC}. \textbf{Coupon items} are to cater to the wants of the {\RC} or food items that can't be decided upon a day prior and has to be served on an immediate need basis.
+\item Both of them are accounted for in different monetary mechanisms. The \textbf{meal items} get accounted for in a pooled fund system. The \textbf{coupon items} are paid off via the means of a coupon in a separate accounting system. 
+\item The \textbf{meal items} for \textit{Lunch and Dinner} have been divided into four equivalence classes \textbf{Base}, \textbf{Additional}, \textbf{Special Veg} and \textbf{Special Non veg}. Therefore $\mathcal{M}$, the menu, is partitioned into 5 total partitions , the four mentioned above and the \textbf{Breakfast} items.
+\item The idea behind \textbf{base} is to have a common minimal requirement satisfying food item that majority of the {\RC} are bound to use for their daily needs. But it is not designed to be sufficient, especially if someone takes some rotis they are bound to take some extra curry that can found in \textbf{Additional}. The idea is that penny pinchers, or people who might simply like to prefer dal and rice or dal and roti their needs are met within as little cost as possible. It is also by design a mandatory meal that would be utilised by all {\RC}.
+\item The idea behind \textbf{additional} is to provide a few more vegetarian items that would be needed on top of the very minimal basic food items to have a complete savoury meal. 
+\item \textbf{Special Veg} is supposed to provide a food item on top of \textbf{base} and \textbf{additional} that would gratify the vegetarians primarily.
+\item \textbf{Special Non Veg} is supposed to provide a food item that would gratify the non vegetarians amongst the {\RC} primarily.
+\item Based on the meal preferences we have provided a \textbf{meal plan budget} and asked the {\RC} to send us an amount that will contribute to \textbf{net sum} which would get utilised by us to pay for the items we procure from the market. In our scenario we had settled on a meal budget of $4000$ rs for people who would only choose base and additional meals through out our tenure. A meal budget of $4500$ rs for people who would sometimes take up \textbf{Special Veg} items from the menu. And a meal budget of $5000$ rs for people who would also take up \textbf{Special Non Veg}. 
+\item We even had a discounted meal budget, of $2500$rs, for people who visit the institute upto at most  15 days within a month(or our tenure term) or who would be visiting the mess mostly during lunch hours.
+\item The \textbf{coupon items} were priced at multiples of $5$rs except 5rs. The thought that went into the design of the \textbf{coupon items} is that we need to make them differently color coded so that the people serving those items could be pre-instructed of what color coupons to check for while disbursing the items.
+Price of each serving of a \textbf{coupon item} usually depends on the market price at which the items were procured. We also kept them at a fixed supply disbursed in a first come first serve mechanism save the \textbf{coupon items} like coffee and tea. The items procured usually catered to the customer wants and was intended to serve as a thrill element like those Big Billion Day sales we have at flipkart or amazon.
+\item For the \textbf{meal items} we have the philosophy of being able to \textbf{exactly} cater to the {\RC} who have opted for the particular meals a day prior to a software system built by Prateek. We of course made sure we made the food items in excess but not too much either, else we would contribute to excess food wastage. We can actually make a good statistical estimator that takes into account IMSc sensibilities and the data we hoarded in our tenure to have a more data driven count for the excess food we may be required to make in the future.
+\item We ask members of the {\RC} to let us know their options for the next day's meal preference by \textbf{5 pm} everyday. This allows us to know the exact numbers for each meal that is needed to prepared the next day by the cooks. We need the deadline to be 5pm so that \textbf{R. Krishabalaji} can place the required orders to the suppliers.
+\item We made several whatsapp groups with the cooks, the market procurers, the {\RC} and also a central group to store our bills. This allowed for fast asynchronous communication between parties. 
+\item  The role of \textbf{R. Krishabalaji} has to be highlighted. He helped us a lot in this entire workflow. He is a crucial pivot to the efficiency of our system. And we even found that on days he wasn't there we were at a loss with our estimates. From prateek's software we get a count on the number of people opting for a \textbf{meal item} but we need \textbf{R. Krishabalaji} to convert this count to an estimate of the quantity of \textbf{meal item} that needs to be made and ergo the quantity of the raw materials to be procured as well. 
+\textbf{R. Krishabalaji} also keeps a tab on the raw materials left over and accordingly guides us to make changes for the menu. 
+\item After the mess ran for two weeks, we also present the incomplete pricing data that can serve as a good estimate for the final meal prices. This allows the {\RC} to alter their meal preferences for future schedules constrained to the budget they are comfortable with.
+\end{itemize}
+
+\section{Prateek's Software}
+We need a 3D database, $\mathcal{D}$, to work with for our operations. Let D be the set containing the number of days of a month. In our particular case the month of july. Let RC denote the set of {\RC}. Let Pref denote the multisubset of the 5 equivalence classes for breakfast, lunch and dinner. Basically lists down the preferences of a {\RC} for a particular day of the month.
+{\color{red}{ $$\mathcal{D} ~=~ D\times RC \times Pref$$. }} 
+
+An example of an element in the database - (25,\textit{ramitd},(\{standard\},\{base,additional,special veg\},\{base\})) would mean that, for the $25^{\textit{th}}$ day of the month , member-\textit{ramitd}  of {\RC} has opted for the following meal options  - 
+  \begin{itemize}
+  \item For breakfast - standard ( the only other option is none or empty set here)
+  \item For lunch - base + additional + special veg (this particular option in prateek's software is listed as Add+SplVeg)
+  \item For dinner - base ( its called base as well in prateek's software).
+  \end{itemize}
+
+
+Prateek's software names the meal options as follows -
+\begin{itemize}
+\item Base - for only the base meal
+\item Additional - For base + additional meal
+\item SplVeg - For base + special veg
+\item SplNonVeg - For base + special non veg
+\item Additional+SplVeg - For base+ additional + Special veg
+\item Additional+SplNonVeg - For base+ additional + Special Non veg
+\end{itemize}
+
+Google sheets being a 2D object, we had to splice up the database into Member sheets for each registered customers and in each such sheet the particular member only has access to changing the preferences of food items for the days of the month. After each day's \textbf{5 pm} passes the options selected by the registered customer gets locked. This feature helps us in keeping an uncorrupted copy of the history of meals consumed.
+
+{\color{red}{Currently, in prateek's software prateek has the entire permissions and there is some trust levied onto him that he doesn't play foul.}}
+
+\subsection{Operation guidelines for the mess managers}
+
+
+\section{Pricing the meals}
+We want to be designing a system as fair as possible within our mode of operation. We charge each equivalence class from our Menu as a single unit.  We do a simple count based on prateek's software of the number of people opting in that particular equivalence class of meal. Like for the count of number of breakfasts served is basically $$=| \{ (i,j,k) \in \mathcal{D}~ | ~ \text{standard is contained in the list contained in k}\}|$$. This goes into the denominator.
+
+ For the numerator basically it is the total cost of number of meals consumed in that particular equivalence class. Let's take for example the equivalence class Additional. Let, Additional $\subset \mathcal{M}$ be equal to the following set $\{a_{1},a_{2},\ldots\}$. We know that each such menu item will be correspondingly needing raw materials in required quantities for it to be made into an eatable food item. Therefore you'll have these sets $\{r_{a_{1}},r_{a_{2}},\ldots\} \subset \mathcal{R}$ and $\{q_{a_{1}},q_{a_{2}}\ldots\}\subset \mathcal{Q}$. Therefore the total cost of Additional Food items through the month is basically, Assuming x is the supplier/provider.
+
+\begin{equation*}
+\begin{aligned}
+& {\text{Additional Cost}}
+& & = ~\sum_{j} P_{x}(r_{a_{j}})\times q_{a_{j}}\\
+\end{aligned}
+\end{equation*}
+This goes into the numerator.
+
+So for specific meal price of additional food items through out the mess tenure is $$\frac{\text{Additional Cost}}{\# \text{Additonal Meals}}$$
+
+The pricing for the other meal classes are done similarly.
+
+\section{Nuggets of Practical Wisdom}
+
+\section{How to scale up the operations}
+\end{document}
+
